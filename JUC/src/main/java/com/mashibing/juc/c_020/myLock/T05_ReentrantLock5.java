@@ -22,6 +22,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @Author:         songyafei
+ * @Package:        com.mashibing.juc.c_020.myLock
+ * @ClassName:      T05_ReentrantLock5
+ * @Description:     ReentrantLock5 练习5
+ * @Param
+ * @Exception
+ * @CreateDate:     2019/12/20 14:42
+ * @UpdateRemark:   The modified content
+ * @Version:        1.0
+ * @Return :
+ **/
+
 public class T05_ReentrantLock5 extends Thread {
 		
 	private static ReentrantLock lock=new ReentrantLock(true); //参数为true表示为公平锁，请对比输出结果
@@ -36,6 +49,9 @@ public class T05_ReentrantLock5 extends Thread {
             }
         }
     }
+
+
+
     public static void main(String[] args) {
         T05_ReentrantLock5 rl=new T05_ReentrantLock5();
         List<Thread> threadList = new ArrayList<Thread>();
